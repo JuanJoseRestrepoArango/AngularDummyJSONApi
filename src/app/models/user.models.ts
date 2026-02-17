@@ -1,25 +1,25 @@
 export interface User {
     id: number;
-    firstName: string;
-    lastName: string;
-    maidenName: string;
-    age: number;
-    gender: string;
-    email: string;
-    phone: string;
-    username: string;
+    firstName: string;//
+    lastName: string;//
+    maidenName: string;//
+    age: number;//
+    gender: string;//
+    email: string;//
+    phone: string;//
+    username: string;//
     password: string;
-    birthDate: string;
+    birthDate: string;//
     image: string;
-    bloodGroup: string;
-    height: number;
-    weight: number;
-    eyeColor: string;
+    bloodGroup: string;//
+    height: number;//
+    weight: number;//
+    eyeColor: string;//
     hair: {
-        color: string;
-        type: string;
+        color: string;//
+        type: string;//
     };
-    ip: string;
+    ip: string;//
     address: {
         address: string;
         city: string;
@@ -33,7 +33,7 @@ export interface User {
         country: string;
     },
     macAddress: string;
-    university: string;
+    university: string;//
     bank: {
         cardExpire: string;
         cardNumber: string;
@@ -41,32 +41,32 @@ export interface User {
         currency: string;
         iban: string;
     },
-    company: {
-        department: string;
-        name: string;
-        title: string;
-        address: {
-            address: string;
-            city: string;
-            state: string;
-            stateCode: string;
-            postalCode: string;
-            coordinates: {
-                lat: number;
-                lng: number;
-            };
-            country: string;
-        };
-    },
+    company: {//
+        department: string;//
+        name: string;//
+        title: string;//
+        address: {//
+            address: string;//
+            city: string;//
+            state: string;//
+            stateCode: string;//
+            postalCode: string;//
+            coordinates: {//
+                lat: number;//
+                lng: number;//
+            };//
+            country: string;//
+        };//
+    },//
     ein: string;
     ssn: string;
-    userAgent: string;
+    userAgent: string;//
     crypto: {
-        coin: string;
-        wallet: string;
-        network: string;
+        coin: string;//
+        wallet: string;//
+        network: string;//
     },
-    role: string;
+    role: string;//
 }
 
 export interface UserResponse {
