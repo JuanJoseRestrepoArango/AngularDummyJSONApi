@@ -1,0 +1,87 @@
+<section class="mb-16 m-5" id="experience">
+        
+        
+    <div *ngIf="loading" class="text-center p-10">
+        <p class="text-xl animate-pulse text-blue-500">Cargando usuarios de DummyJSON...</p>
+    </div>
+
+    <div *ngIf="!loading">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-center w-full rounded-xl overflow-hidden shadow-lg bg-gray-200 p-2">
+    
+            <div class="flex flex-col justify-between items-center p-6">
+                <img [src]="user?.image" (error)="handleImageError()" alt="Foto de perfil" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-sm">
+                <h4 class="text-xl font-bold">
+                    {{user?.firstName}} {{user?.lastName}} {{user?.maidenName}}
+                </h4>  
+            </div>
+            <div class="p-3 flex flex-col justify-between items-start">
+                <div class="h-87 max-w-75 max-height-100 overflow-auto">
+                    <h5 class="mb-5 ml-5 mr-5 font-bold">Información del General</h5>
+                    <p class="break-all">Usuario:  {{user?.username}}</p>
+                    <p class="break-all">Edad:  {{user?.age}}</p>
+                    <p class="break-all">Genero:  {{user?.gender}}</p>
+                    <p class="break-all">Fecha de Nacimiento:  {{user?.birthDate}}</p>
+                    <p class="break-all">Tipo de Sangre:  {{user?.bloodGroup}}</p>
+                    <p class="break-all">Altura:  {{user?.height}} cm</p>
+                    <p class="break-all">Peso:  {{user?.weight}} kg</p>
+                    <p class="break-all">Color de Ojos:  {{user?.eyeColor}}</p>
+                    <p class="break-all">Color de Cabello:  {{user?.hair?.color}}</p>
+                    <p class="break-all">Tipo de Cabello: {{user?.hair?.type}}</p>
+                    <p class="break-all">Universidad:  {{user?.university}}</p>
+                </div>
+                <div class="h-75 max-w-75 max-height-100 overflow-auto">
+                    <h5 class="mb-5 ml-5 mr-5 font-bold ">Información de Crypto</h5>
+                    <p class="break-all">Agente:  {{user?.userAgent}}</p>
+                    <p class="break-all">Coin:  {{user?.crypto?.coin}}</p>
+                    <p class="break-all">Billetera:  {{user?.crypto?.wallet}}</p>
+                    <p class="break-all">Red:  {{user?.crypto?.network}}</p>
+                    
+                </div>
+                
+            </div>
+            <div class="p-3 flex flex-col justify-between items-start">
+                <div class="h-87 max-w-75 max-height-100 overflow-auto">
+                    <h5 class="mb-5 ml-5 mr-5 font-bold">Información del Compañia</h5>
+                    <p class="break-all">Departamento:  {{user?.company?.department}}</p>
+                    <p class="break-all">Nombre:  {{user?.company?.name}}</p>
+                    <p class="break-all">Titulo:  {{user?.company?.title}}</p>
+                    <p class="break-all">Direccion:  {{user?.company?.address?.address}}</p>
+                    <p class="break-all">Ciudad:  {{user?.company?.address?.city}}</p>
+                    <p class="break-all">Estado:  {{user?.company?.address?.state}}</p>
+                    <p class="break-all">Codigo Estado:  {{user?.company?.address?.stateCode}}</p>
+                    <p class="break-all">Codigo Postal:  {{user?.company?.address?.postalCode}}</p>
+                    <p class="break-all">Pais:  {{user?.company?.address?.country}}</p>
+                    <p class="break-all">Rol:  {{user?.role}}</p>
+                </div>
+                <div class="h-75 max-w-75 max-height-100 overflow-auto">
+                    <h5 class="mb-5 ml-5 mr-5 font-bold ">Información de Contacto</h5>
+                    <p class=" text-sm text-gray-600 ">Email: {{user?.email}}</p>
+                    <p class=" text-sm text-gray-600 ">Telefono: {{user?.phone}}</p>
+                    <p class=" text-sm text-gray-600 ">Ip: {{user?.ip}}</p>
+                    <p class=" text-sm text-gray-600 ">Mac Address: {{user?.macAddress}}</p>
+                    <p class=" text-sm text-gray-600 ">Direccion: {{user?.address?.address}}</p>
+                    <p class=" text-sm text-gray-600 ">Ciudad: {{user?.address?.city}}</p>
+                    <p class=" text-sm text-gray-600 ">Estado: {{user?.address?.state}}</p>
+                    <p class=" text-sm text-gray-600 ">Codigo Estado: {{user?.address?.stateCode}}</p>
+                    <p class=" text-sm text-gray-600 ">Codigo Postal: {{user?.address?.postalCode}}</p>
+                    <p class=" text-sm text-gray-600 ">Pais: {{user?.address?.country}}</p>
+                </div>
+                
+            </div>
+                    
+                
+            
+    
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <button 
+            (click)="goBack()" 
+            class="mt-10 px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+            Volver
+        </button>
+    </div>
+</section>
+
