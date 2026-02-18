@@ -8,18 +8,20 @@
     </div>
 
     <div *ngIf="!loading" class=" grid grid-cols-1 md:grid-cols-2 gap-8 m-20">
-        <a class="hover:" *ngFor="let user of users" [routerLink]="['/users', user.id]">
+        
 
-            <app-card-component
-                [clickeable]="true"
-                [image]="user.image"
-                [showImage]="true"
-                [title]="user.firstName + ' ' + user.lastName"
-                [subtitle]="user.company.title"
-                [description]="'Titulo: ' + user.company.title +'\nEmail: ' + user.email + '\nTelefono: ' + user.phone +'\n Universidad: ' + user.university"
-                [date]="user.birthDate">
-            </app-card-component>
-        </a>
+        <app-card-component
+            *ngFor="let comment of comments"
+            [clickeable]="false"
+            [showImage]="false"
+            [title]="comment.body"
+            [subtitle]="comment.user.username"
+            [description]="comment.user.fullName"
+            [date]="' '+comment.likes"
+            [symbol]="'favorite'"
+            >
+        </app-card-component>
+        
         
     </div>
 
@@ -37,7 +39,7 @@
 
         <button 
             (click)="nextPage()" 
-            [disabled]="(currentPage + 1) * usersCards >= totalUsers || loading"
+            [disabled]="(currentPage + 1) * commentsCards >= totalComments || loading"
             class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
             Siguiente
         </button>

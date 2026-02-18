@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShellComponent } from './layout/shell/shell';
 import { HomeComponent } from './pages/home/home';
 import { UserDetailComponent } from './pages/user-detail/user-detail';
+import { CommentsComponent } from './pages/comments/comments';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     children:[
         {path:'', component:HomeComponent},
         {path:'users/:id', component:UserDetailComponent},
+        {path:'comments', component:CommentsComponent},
         {path:'*', redirectTo:''}
     ]
   }

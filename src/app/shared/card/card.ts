@@ -8,11 +8,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './card.html',
 })
 export class CardComponent {
-
+  @Input() clickeable!:boolean
+  @Input()  image!: string;
+  @Input()  showImage!: boolean;
   @Input()  title!: string;
   @Input()  subtitle!: string;
   @Input()  description!: string;
   @Input()  date!: string;
+  @Input()  symbol!: string;
   
-
+    handleImageError() {
+      this.image = 'images/defaultUserImage.png';
+    }
 }

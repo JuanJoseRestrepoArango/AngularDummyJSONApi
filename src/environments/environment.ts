@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
     baseUrl: 'https://dummyjson.com',
-    usersResource: 'users'
+    usersResource: 'users',
+    commentsResource: 'comments'
 };

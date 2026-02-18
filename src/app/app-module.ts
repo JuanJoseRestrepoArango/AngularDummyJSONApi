@@ -12,11 +12,15 @@ import { UsersListComponent } from './pages/home/sections/users/users';
 import { UserDetailComponent } from './pages/user-detail/user-detail';
 import {  SidebarInfoComponent } from './layout/sidebar/sidebar-info/sidebar-info';
 import { SidebarNavComponent } from './layout/sidebar/sidebar-nav/sidebar-nav';
+import { CommentsComponent } from './pages/comments/comments';
+import { CommentListComponent } from './pages/comments/sections/comment-list/comment-list';
+
 
 
 @NgModule({
   declarations: [
     App,
+    
     
   ],
   imports: [
@@ -31,7 +35,10 @@ import { SidebarNavComponent } from './layout/sidebar/sidebar-nav/sidebar-nav';
     CardComponent,
     UserDetailComponent,
     SidebarInfoComponent,
-    SidebarNavComponent
+    SidebarNavComponent,
+    CommentsComponent,
+    CommentListComponent
+    
     
   ],
   providers: [
